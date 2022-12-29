@@ -1,0 +1,3670 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<style type="text/css">
+		html {
+			font-family: sans-serif;
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%
+		}
+
+		body {
+			margin: 0
+		}
+
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		main,
+		menu,
+		nav,
+		section,
+		summary {
+			display: block
+		}
+
+		audio,
+		canvas,
+		progress,
+		video {
+			display: inline-block;
+			vertical-align: baseline
+		}
+
+		audio:not([controls]) {
+			display: none;
+			height: 0
+		}
+
+		[hidden],
+		template {
+			display: none
+		}
+
+		a {
+			background-color: transparent
+		}
+
+		a:active,
+		a:hover {
+			outline: 0
+		}
+
+		abbr[title] {
+			border-bottom: 1px dotted
+		}
+
+		b,
+		strong {
+			font-weight: 700
+		}
+
+		dfn {
+			font-style: italic
+		}
+
+		h1 {
+			font-size: 2em;
+			margin: .67em 0
+		}
+
+		mark {
+			background: #ff0;
+			color: #000
+		}
+
+		small {
+			font-size: 80%
+		}
+
+		sub,
+		sup {
+			font-size: 75%;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline
+		}
+
+		sup {
+			top: -.5em
+		}
+
+		sub {
+			bottom: -.25em
+		}
+
+		img {
+			border: 0
+		}
+
+		svg:not(:root) {
+			overflow: hidden
+		}
+
+		figure {
+			margin: 1em 40px
+		}
+
+		hr {
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+			height: 0
+		}
+
+		pre {
+			overflow: auto
+		}
+
+		code,
+		kbd,
+		pre,
+		samp {
+			font-family: monospace, monospace;
+			font-size: 1em
+		}
+
+		button,
+		input,
+		optgroup,
+		select,
+		textarea {
+			color: inherit;
+			font: inherit;
+			margin: 0
+		}
+
+		button {
+			overflow: visible
+		}
+
+		button,
+		select {
+			text-transform: none
+		}
+
+		button,
+		html input[type=button],
+		input[type=reset],
+		input[type=submit] {
+			-webkit-appearance: button;
+			cursor: pointer
+		}
+
+		button[disabled],
+		html input[disabled] {
+			cursor: default
+		}
+
+		button::-moz-focus-inner,
+		input::-moz-focus-inner {
+			border: 0;
+			padding: 0
+		}
+
+		input {
+			line-height: normal
+		}
+
+		input[type=checkbox],
+		input[type=radio] {
+			box-sizing: border-box;
+			padding: 0
+		}
+
+		input[type=number]::-webkit-inner-spin-button,
+		input[type=number]::-webkit-outer-spin-button {
+			height: auto
+		}
+
+		input[type=search] {
+			-webkit-appearance: textfield;
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box
+		}
+
+		input[type=search]::-webkit-search-cancel-button,
+		input[type=search]::-webkit-search-decoration {
+			-webkit-appearance: none
+		}
+
+		fieldset {
+			border: 1px solid silver;
+			margin: 0 2px;
+			padding: .35em .625em .75em
+		}
+
+		legend {
+			border: 0;
+			padding: 0
+		}
+
+		textarea {
+			overflow: auto
+		}
+
+		optgroup {
+			font-weight: 700
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		td,
+		th {
+			padding: 0
+		}
+	</style>
+	<style type="text/css">
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			width: auto;
+			height: 100%
+		}
+
+		body {
+			font-family: -apple-system, Roboto, Trebuchet MS, sans-serif;
+			font-size: .85em;
+			line-height: 1.2em;
+			color: #000;
+			background-color: #999
+		}
+
+		a,
+		img {
+			border: 0;
+			outline: 0
+		}
+
+		a {
+			color: #000;
+			text-decoration: none
+		}
+
+		h1,
+		p {
+			margin: 0;
+			padding: 0
+		}
+
+		h1 {
+			margin-bottom: 9px;
+			font-weight: 700;
+			font-size: 127%;
+			line-height: 100%
+		}
+
+		.wrap {
+			position: relative;
+			margin: 0 auto;
+			width: auto;
+			min-width: 240px;
+			max-width: 100%;
+			height: 100%;
+			min-height: 240px;
+			overflow: hidden;
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-size: cover
+		}
+
+		.pagelink {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: auto;
+			height: auto
+		}
+
+		.description {
+			position: absolute;
+			left: 5px;
+			right: 5px;
+			top: 5px;
+			bottom: 5px;
+			color: #000;
+			text-align: left;
+			white-space: normal;
+			overflow: hidden
+		}
+
+		.window {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 50%;
+			width: 84.4%;
+			min-width: 240px;
+			max-width: 270px;
+			margin: auto;
+			text-align: center;
+			background-color: #f9f9f9;
+			-webkit-border-radius: 12px;
+			-moz-border-radius: 12px;
+			-ms-border-radius: 12px;
+			-o-border-radius: 12px;
+			border-radius: 12px;
+			overflow: hidden;
+			-webkit-transform: translate(0, -50%);
+			-moz-transform: translate(0, -50%);
+			transform: translate(0, -50%)
+		}
+
+		div.text {
+			margin: 7.6% 7% 8% 7%
+		}
+
+		div.text span.text {
+			display: block;
+			margin: 0
+		}
+
+		.button,
+		.buttons {
+			margin: 0;
+			text-align: center
+		}
+
+		.buttons {
+			position: relative;
+			height: auto;
+			min-height: 45px;
+			color: #1275ec;
+			font-weight: 700;
+			font-size: 130%;
+			border-top: 1px solid #b4b4b4;
+			white-space: nowrap
+		}
+
+		.button {
+			display: inline-block;
+			margin: 0 auto;
+			padding: 15px 3%;
+			width: 43%;
+			color: #1275ec;
+			text-align: center;
+			white-space: normal
+		}
+
+		.button.cancel {
+			border-left: 1px solid #b4b4b4
+		}
+
+		@supports (display:-webkit-box) or (display:-moz-box) or (display:-webkit-flex) or (display:flex) {
+
+			.button,
+			.buttons {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: row;
+				-moz-flex-direction: row;
+				flex-direction: row;
+				-webkit-flex-wrap: nowrap;
+				-moz-flex-wrap: nowrap;
+				flex-wrap: nowrap;
+				-webkit-justify-content: space-between;
+				-moz-justify-content: space-between;
+				justify-content: space-between;
+				-webkit-align-items: stretch;
+				-moz-flex-align: stretch;
+				align-items: stretch;
+				-webkit-align-content: stretch;
+				-moz-flex-line-pack: stretch;
+				align-content: stretch;
+				-webkit-box-align: stretch;
+				-moz-box-align: stretch;
+				box-align: stretch;
+				-webkit-box-pack: center;
+				-moz-box-pack: center;
+				box-pack: center;
+				-webkit-box-direction: normal;
+				-moz-box-direction: normal;
+				box-direction: normal;
+				-webkit-box-orient: vertical;
+				-moz-box-orient: vertical;
+				box-orient: vertical
+			}
+
+			.button {
+				-webkit-flex-direction: column;
+				-moz-flex-direction: column;
+				flex-direction: column;
+				-webkit-justify-content: center;
+				-moz-justify-content: center;
+				justify-content: center;
+				-webkit-flex: 1 auto;
+				-moz-flex: 1 auto;
+				-ms-flex: 1 auto;
+				-o-flex: 1 auto;
+				flex: 1 auto;
+				width: auto
+			}
+
+			.button span {
+				-webkit-box-flex: 0 1 auto;
+				-moz-box-flex: 0 1 auto;
+				-webkit-flex: 0 1 auto;
+				flex: 0 1 auto;
+				-webkit-order: 0;
+				-moz-order: 0;
+				order: 0
+			}
+		}
+
+		@media screen and (orientation:portrait) and (max-width:450px) {
+			h1 {
+				margin-bottom: 2px;
+				line-height: 106%
+			}
+
+			div.text {
+				margin: 7.5% 6.7% 8% 6.7%
+			}
+		}
+
+		@media screen and (orientation:portrait) and (max-width:400px) {
+			h1 {
+				margin-bottom: 3px;
+				font-size: 128%;
+				line-height: 112%
+			}
+
+			div.text {
+				margin: 7.4% 6.4% 8% 6.4%
+			}
+		}
+
+		@media screen and (orientation:portrait) and (max-width:375px) {
+			h1 {
+				margin-bottom: 4px;
+				line-height: 118%
+			}
+
+			div.text {
+				margin: 7.3% 6.1% 8% 6.1%
+			}
+
+			.buttons {
+				min-height: 49px
+			}
+		}
+
+		@media screen and (orientation:portrait) and (max-width:350px) {
+			h1 {
+				margin-bottom: 5px;
+				font-size: 129%;
+				line-height: 124%
+			}
+
+			div.text {
+				margin: 7.2% 5.8% 8% 5.8%
+			}
+
+			.buttons {
+				min-height: 46px
+			}
+		}
+
+		@media screen and (orientation:portrait) and (max-width:325px) {
+			body {
+				font-size: .84em
+			}
+
+			h1 {
+				margin-bottom: 6px;
+				font-size: 130%;
+				line-height: 130%
+			}
+
+			div.text {
+				margin: 7% 5.6% 8% 5.6%
+			}
+
+			.buttons {
+				min-height: 41px
+			}
+
+			.button {
+				line-height: 65%
+			}
+		}
+
+		@media screen and (orientation:portrait) and (max-width:300px) {
+			body {
+				font-size: .77em
+			}
+		}
+
+		@media screen and (orientation:portrait) and (max-width:275px) {
+			body {
+				font-size: .7em
+			}
+		}
+
+		@media screen and (orientation:portrait) and (max-width:250px) {
+			body {
+				font-size: .63em
+			}
+		}
+
+		@media screen and (orientation:landscape) and (max-height:450px) {
+			h1 {
+				margin-bottom: 2px;
+				line-height: 106%
+			}
+
+			div.text {
+				margin: 6.5% 7% 7% 7%
+			}
+		}
+
+		@media screen and (orientation:landscape) and (max-height:400px) {
+			h1 {
+				margin-bottom: 3px;
+				font-size: 128%;
+				line-height: 112%
+			}
+
+			div.text {
+				margin: 5.5% 7% 6% 7%
+			}
+		}
+
+		@media screen and (orientation:landscape) and (max-height:375px) {
+			h1 {
+				margin-bottom: 4px;
+				line-height: 118%
+			}
+
+			div.text {
+				margin: 4.5% 7% 5% 7%
+			}
+
+			.buttons {
+				min-height: 49px
+			}
+		}
+
+		@media screen and (orientation:landscape) and (max-height:350px) {
+			h1 {
+				margin-bottom: 5px;
+				font-size: 129%;
+				line-height: 124%
+			}
+
+			div.text {
+				margin: 3.5% 7% 4% 7%
+			}
+
+			.buttons {
+				min-height: 46px
+			}
+		}
+
+		@media screen and (orientation:landscape) and (max-height:325px) {
+			body {
+				font-size: .84em
+			}
+
+			h1 {
+				margin-bottom: 6px;
+				font-size: 130%;
+				line-height: 130%
+			}
+
+			div.text {
+				margin: 2.5% 7% 3% 7%
+			}
+
+			.buttons {
+				min-height: 41px
+			}
+
+			.button {
+				line-height: 65%
+			}
+		}
+
+		@media screen and (orientation:landscape) and (max-height:300px) {
+			body {
+				font-size: .77em
+			}
+		}
+
+		@media screen and (orientation:landscape) and (max-height:275px) {
+			body {
+				font-size: .7em
+			}
+		}
+
+		@media screen and (orientation:landscape) and (max-height:250px) {
+			body {
+				font-size: .63em
+			}
+		}
+
+		.viewport-creative-size-slider .wrap {
+			min-height: auto
+		}
+	</style>
+	<style type="text/css">
+		body {
+			background-color: rgba(153, 153, 153, 0);
+		}
+	</style>
+	<style type="text/css">
+		.falling-wrap {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: auto;
+			height: auto;
+			overflow: hidden;
+			z-index: 1
+		}
+
+		.falling-wrap .falling-sprites {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			bottom: 0;
+			right: 0;
+			width: 1024px;
+			height: 1024px;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			overflow: hidden
+		}
+
+		.falling-wrap .falling-sprites .sprite {
+			position: absolute;
+			top: 0;
+			left: 0
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj1 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(446px, -89px, 0) scale3d(.6, .6, 1);
+			transform: translate3d(446px, -89px, 0) scale3d(.6, .6, 1);
+			-webkit-animation: falling-sprites-sprite-obj1 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj1 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj1 {
+			0% {
+				-webkit-transform: translate3d(282.9797507365328px, 987.855092172684px, 0) rotateX(0) rotateY(0) rotateZ(696.29deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			3.8505% {
+				-webkit-transform: translate3d(292px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			3.8588% {
+				-webkit-transform: translate3d(292px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			3.9338% {
+				-webkit-transform: translate3d(292px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			3.9421% {
+				-webkit-transform: translate3d(286.09910797385623px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			20.6268% {
+				-webkit-transform: translate3d(246px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			36.9645% {
+				-webkit-transform: translate3d(292px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			54.0698% {
+				-webkit-transform: translate3d(246px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			70.6268% {
+				-webkit-transform: translate3d(292px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			87.0742% {
+				-webkit-transform: translate3d(246px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(280.73932053975074px, 978.8774973645004px, 0) rotateX(0) rotateY(0) rotateZ(690.4deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj1 {
+			0% {
+				transform: translate3d(282.9797507365328px, 987.855092172684px, 0) rotateX(0) rotateY(0) rotateZ(696.29deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			3.8505% {
+				transform: translate3d(292px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			3.8588% {
+				transform: translate3d(292px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			3.9338% {
+				transform: translate3d(292px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			3.9421% {
+				transform: translate3d(286.09910797385623px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			20.6268% {
+				transform: translate3d(246px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			36.9645% {
+				transform: translate3d(292px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			54.0698% {
+				transform: translate3d(246px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			70.6268% {
+				transform: translate3d(292px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			87.0742% {
+				transform: translate3d(246px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(280.73932053975074px, 978.8774973645004px, 0) rotateX(0) rotateY(0) rotateZ(690.4deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj2 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(623px, -89px, 0) scale3d(.5, .5, 1);
+			transform: translate3d(623px, -89px, 0) scale3d(.5, .5, 1);
+			-webkit-animation: falling-sprites-sprite-obj2 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj2 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj2 {
+			0% {
+				-webkit-transform: translate3d(447.56987666544296px, 938.1276687560353px, 0) rotateX(0) rotateY(0) rotateZ(-663.63deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			8.3971% {
+				-webkit-transform: translate3d(469px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			8.4045% {
+				-webkit-transform: translate3d(469px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			8.8892% {
+				-webkit-transform: translate3d(469px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			8.8967% {
+				-webkit-transform: translate3d(465.771961124183px, -60.83138570439186px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			25.6655% {
+				-webkit-transform: translate3d(423px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			42.0033% {
+				-webkit-transform: translate3d(469px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			59.1085% {
+				-webkit-transform: translate3d(423px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			75.6655% {
+				-webkit-transform: translate3d(469px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			92.1129% {
+				-webkit-transform: translate3d(423px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(443.6608748093537px, 922.4639650535894px, 0) rotateX(0) rotateY(0) rotateZ(-653.35deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj2 {
+			0% {
+				transform: translate3d(447.56987666544296px, 938.1276687560353px, 0) rotateX(0) rotateY(0) rotateZ(-663.63deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			8.3971% {
+				transform: translate3d(469px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			8.4045% {
+				transform: translate3d(469px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			8.8892% {
+				transform: translate3d(469px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			8.8967% {
+				transform: translate3d(465.771961124183px, -60.83138570439186px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			25.6655% {
+				transform: translate3d(423px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			42.0033% {
+				transform: translate3d(469px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			59.1085% {
+				transform: translate3d(423px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			75.6655% {
+				transform: translate3d(469px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			92.1129% {
+				transform: translate3d(423px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(443.6608748093537px, 922.4639650535894px, 0) rotateX(0) rotateY(0) rotateZ(-653.35deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj3 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(805px, -89px, 0) scale3d(.4, .4, 1);
+			transform: translate3d(805px, -89px, 0) scale3d(.4, .4, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj3 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj3 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj3 {
+			0% {
+				-webkit-transform: translate3d(625.6978873702742px, 922.6122775407334px, 0) rotateX(0) rotateY(0) rotateZ(653.49deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			10.3631% {
+				-webkit-transform: translate3d(651px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			10.371% {
+				-webkit-transform: translate3d(651px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			10.8298% {
+				-webkit-transform: translate3d(651px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			10.8377% {
+				-webkit-transform: translate3d(646.5841022222222px, -56.15216796616147px, 0) rotateX(0) rotateY(0) rotateZ(11.41deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			27.6061% {
+				-webkit-transform: translate3d(605px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			43.9438% {
+				-webkit-transform: translate3d(651px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			61.0491% {
+				-webkit-transform: translate3d(605px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			77.6061% {
+				-webkit-transform: translate3d(651px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			94.0534% {
+				-webkit-transform: translate3d(605px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(620.5000374057115px, 901.7840495858533px, 0) rotateX(0) rotateY(0) rotateZ(639.82deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj3 {
+			0% {
+				transform: translate3d(625.6978873702742px, 922.6122775407334px, 0) rotateX(0) rotateY(0) rotateZ(653.49deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			10.3631% {
+				transform: translate3d(651px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			10.371% {
+				transform: translate3d(651px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			10.8298% {
+				transform: translate3d(651px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			10.8377% {
+				transform: translate3d(646.5841022222222px, -56.15216796616147px, 0) rotateX(0) rotateY(0) rotateZ(11.41deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			27.6061% {
+				transform: translate3d(605px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			43.9438% {
+				transform: translate3d(651px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			61.0491% {
+				transform: translate3d(605px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			77.6061% {
+				transform: translate3d(651px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			94.0534% {
+				transform: translate3d(605px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(620.5000374057115px, 901.7840495858533px, 0) rotateX(0) rotateY(0) rotateZ(639.82deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj4 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(946px, -89px, 0) rotateX(0) rotateY(0) rotateZ(-23deg) scale3d(.6, .6, 1);
+			transform: translate3d(946px, -89px, 0) rotateX(0) rotateY(0) rotateZ(-23deg) scale3d(.6, .6, 1);
+			-webkit-animation: obj4_1456436027987 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj4 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj4 {
+			0% {
+				-webkit-transform: translate3d(754.6808127760411px, 874.4588351162854px, 0) rotateX(0) rotateY(0) rotateZ(-644.84deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			14.2671% {
+				-webkit-transform: translate3d(792px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-743deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			14.2755% {
+				-webkit-transform: translate3d(792px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-743deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			15.0653% {
+				-webkit-transform: translate3d(792px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(-23deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			15.0736% {
+				-webkit-transform: translate3d(788.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-31.28deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			31.8416% {
+				-webkit-transform: translate3d(746px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-141deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			48.1793% {
+				-webkit-transform: translate3d(792px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-261deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			65.2846% {
+				-webkit-transform: translate3d(746px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-386deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			81.8416% {
+				-webkit-transform: translate3d(792px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-504deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			98.289% {
+				-webkit-transform: translate3d(746px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-622deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(749.6466931683243px, 854.2866886602496px, 0) rotateX(0) rotateY(0) rotateZ(-631.59deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj4 {
+			0% {
+				transform: translate3d(754.6808127760411px, 874.4588351162854px, 0) rotateX(0) rotateY(0) rotateZ(-644.84deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			14.2671% {
+				transform: translate3d(792px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-743deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			14.2755% {
+				transform: translate3d(792px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-743deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			15.0653% {
+				transform: translate3d(792px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(-23deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			15.0736% {
+				transform: translate3d(788.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-31.28deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			31.8416% {
+				transform: translate3d(746px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-141deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			48.1793% {
+				transform: translate3d(792px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-261deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			65.2846% {
+				transform: translate3d(746px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-386deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			81.8416% {
+				transform: translate3d(792px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-504deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			98.289% {
+				transform: translate3d(746px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-622deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(749.6466931683243px, 854.2866886602496px, 0) rotateX(0) rotateY(0) rotateZ(-631.59deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj5 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(280px, -89px, 0) scale3d(.6, .6, 1);
+			transform: translate3d(280px, -89px, 0) scale3d(.6, .6, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj5 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj5 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj5 {
+			0% {
+				-webkit-transform: translate3d(84.28700557980963px, 856.8524750834208px, 0) rotateX(0) rotateY(0) rotateZ(610.35deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			16.3505% {
+				-webkit-transform: translate3d(126px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			16.3588% {
+				-webkit-transform: translate3d(126px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			17.3093% {
+				-webkit-transform: translate3d(126px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			17.3176% {
+				-webkit-transform: translate3d(122.77196112418301px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(8.34deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			34.0856% {
+				-webkit-transform: translate3d(80px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			50.4233% {
+				-webkit-transform: translate3d(126px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			67.5286% {
+				-webkit-transform: translate3d(80px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			84.0856% {
+				-webkit-transform: translate3d(126px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(81.99493118074344px, 831.9141547874915px, 0) rotateX(0) rotateY(0) rotateZ(593.99deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj5 {
+			0% {
+				transform: translate3d(84.28700557980963px, 856.8524750834208px, 0) rotateX(0) rotateY(0) rotateZ(610.35deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			16.3505% {
+				transform: translate3d(126px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			16.3588% {
+				transform: translate3d(126px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			17.3093% {
+				transform: translate3d(126px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			17.3176% {
+				transform: translate3d(122.77196112418301px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(8.34deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			34.0856% {
+				transform: translate3d(80px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			50.4233% {
+				transform: translate3d(126px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			67.5286% {
+				transform: translate3d(80px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			84.0856% {
+				transform: translate3d(126px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(81.99493118074344px, 831.9141547874915px, 0) rotateX(0) rotateY(0) rotateZ(593.99deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj6 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(509px, -89px, 0) scale3d(.4, .4, 1);
+			transform: translate3d(509px, -89px, 0) scale3d(.4, .4, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj6 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj6 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj6 {
+			0% {
+				-webkit-transform: translate3d(319.08760404545137px, 800.4351130511219px, 0) rotateX(0) rotateY(0) rotateZ(-573.12deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			4.2993% {
+				-webkit-transform: translate3d(309px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			21.0756% {
+				-webkit-transform: translate3d(355px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			21.0839% {
+				-webkit-transform: translate3d(355px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			21.5958% {
+				-webkit-transform: translate3d(355px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			21.6041% {
+				-webkit-transform: translate3d(351.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			38.3721% {
+				-webkit-transform: translate3d(309px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			54.7098% {
+				-webkit-transform: translate3d(355px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			71.8151% {
+				-webkit-transform: translate3d(309px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			88.3721% {
+				-webkit-transform: translate3d(355px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(323.15443864996234px, 784.6158579804509px, 0) rotateX(0) rotateY(0) rotateZ(-562.69deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj6 {
+			0% {
+				transform: translate3d(319.08760404545137px, 800.4351130511219px, 0) rotateX(0) rotateY(0) rotateZ(-573.12deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			4.2993% {
+				transform: translate3d(309px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			21.0756% {
+				transform: translate3d(355px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			21.0839% {
+				transform: translate3d(355px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			21.5958% {
+				transform: translate3d(355px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			21.6041% {
+				transform: translate3d(351.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			38.3721% {
+				transform: translate3d(309px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			54.7098% {
+				transform: translate3d(355px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			71.8151% {
+				transform: translate3d(309px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			88.3721% {
+				transform: translate3d(355px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(323.15443864996234px, 784.6158579804509px, 0) rotateX(0) rotateY(0) rotateZ(-562.69deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj7 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(720px, -89px, 0) scale3d(.45, .45, 1);
+			transform: translate3d(720px, -89px, 0) scale3d(.45, .45, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj7 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj7 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj7 {
+			0% {
+				-webkit-transform: translate3d(545.4895647636388px, 740.5242563570221px, 0) rotateX(0) rotateY(0) rotateZ(534.03deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			9.7486% {
+				-webkit-transform: translate3d(520px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			26.5249% {
+				-webkit-transform: translate3d(566px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			26.5332% {
+				-webkit-transform: translate3d(566px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.45, .45, 1);
+				opacity: 0
+			}
+
+			27.3868% {
+				-webkit-transform: translate3d(566px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.45, .45, 1);
+				opacity: 0
+			}
+
+			27.3951% {
+				-webkit-transform: translate3d(560.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			44.1631% {
+				-webkit-transform: translate3d(520px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			60.5008% {
+				-webkit-transform: translate3d(566px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			77.6061% {
+				-webkit-transform: translate3d(520px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			94.1631% {
+				-webkit-transform: translate3d(566px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(550.5825976619558px, 720.7132745156586px, 0) rotateX(0) rotateY(0) rotateZ(521.04deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj7 {
+			0% {
+				transform: translate3d(545.4895647636388px, 740.5242563570221px, 0) rotateX(0) rotateY(0) rotateZ(534.03deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			9.7486% {
+				transform: translate3d(520px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			26.5249% {
+				transform: translate3d(566px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			26.5332% {
+				transform: translate3d(566px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.45, .45, 1);
+				opacity: 0
+			}
+
+			27.3868% {
+				transform: translate3d(566px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.45, .45, 1);
+				opacity: 0
+			}
+
+			27.3951% {
+				transform: translate3d(560.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			44.1631% {
+				transform: translate3d(520px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			60.5008% {
+				transform: translate3d(566px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			77.6061% {
+				transform: translate3d(520px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			94.1631% {
+				transform: translate3d(566px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(550.5825976619558px, 720.7132745156586px, 0) rotateX(0) rotateY(0) rotateZ(521.04deg) scale3d(.45, .45, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj8 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(337px, -89px, 0) scale3d(.6, .6, 1);
+			transform: translate3d(337px, -89px, 0) scale3d(.6, .6, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj8 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj8 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj8 {
+			0% {
+				-webkit-transform: translate3d(174.33757349053712px, 694.4376336253167px, 0) rotateX(0) rotateY(0) rotateZ(-503.22deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			14.183% {
+				-webkit-transform: translate3d(137px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			30.9593% {
+				-webkit-transform: translate3d(183px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			30.9676% {
+				-webkit-transform: translate3d(183px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			31.8416% {
+				-webkit-transform: translate3d(183px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			31.8499% {
+				-webkit-transform: translate3d(179.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			48.6179% {
+				-webkit-transform: translate3d(137px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			64.9556% {
+				-webkit-transform: translate3d(183px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			82.0609% {
+				-webkit-transform: translate3d(137px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			98.6179% {
+				-webkit-transform: translate3d(183px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(179.8093812202996px, 673.1532858235229px, 0) rotateX(0) rotateY(0) rotateZ(-489.18deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj8 {
+			0% {
+				transform: translate3d(174.33757349053712px, 694.4376336253167px, 0) rotateX(0) rotateY(0) rotateZ(-503.22deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			14.183% {
+				transform: translate3d(137px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			30.9593% {
+				transform: translate3d(183px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			30.9676% {
+				transform: translate3d(183px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			31.8416% {
+				transform: translate3d(183px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			31.8499% {
+				transform: translate3d(179.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			48.6179% {
+				transform: translate3d(137px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			64.9556% {
+				transform: translate3d(183px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			82.0609% {
+				transform: translate3d(137px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			98.6179% {
+				transform: translate3d(183px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(179.8093812202996px, 673.1532858235229px, 0) rotateX(0) rotateY(0) rotateZ(-489.18deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj9 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(1001px, -89px, 0) scale3d(.5, .5, 1);
+			transform: translate3d(1001px, -89px, 0) scale3d(.5, .5, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj9 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj9 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj9 {
+			0% {
+				-webkit-transform: translate3d(840.7618629891668px, 636.2140996792531px, 0) rotateX(0) rotateY(0) rotateZ(465.61deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			2.7973% {
+				-webkit-transform: translate3d(847px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			19.2447% {
+				-webkit-transform: translate3d(801px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			36.021% {
+				-webkit-transform: translate3d(847px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			36.0293% {
+				-webkit-transform: translate3d(847px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			36.6891% {
+				-webkit-transform: translate3d(847px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			36.6974% {
+				-webkit-transform: translate3d(841.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			53.4654% {
+				-webkit-transform: translate3d(801px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			69.8031% {
+				-webkit-transform: translate3d(847px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			86.9084% {
+				-webkit-transform: translate3d(801px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(836.7738123453969px, 620.5331495699671px, 0) rotateX(0) rotateY(0) rotateZ(455.32deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj9 {
+			0% {
+				transform: translate3d(840.7618629891668px, 636.2140996792531px, 0) rotateX(0) rotateY(0) rotateZ(465.61deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			2.7973% {
+				transform: translate3d(847px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			19.2447% {
+				transform: translate3d(801px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			36.021% {
+				transform: translate3d(847px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			36.0293% {
+				transform: translate3d(847px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			36.6891% {
+				transform: translate3d(847px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			36.6974% {
+				transform: translate3d(841.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			53.4654% {
+				transform: translate3d(801px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			69.8031% {
+				transform: translate3d(847px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			86.9084% {
+				transform: translate3d(801px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(836.7738123453969px, 620.5331495699671px, 0) rotateX(0) rotateY(0) rotateZ(455.32deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj10 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(614px, -89px, 0) scale3d(.4, .4, 1);
+			transform: translate3d(614px, -89px, 0) scale3d(.4, .4, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj10 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj10 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj10 {
+			0% {
+				-webkit-transform: translate3d(440.9402429036348px, 585.799698549335px, 0) rotateX(0) rotateY(0) rotateZ(-432.1deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			7.8131% {
+				-webkit-transform: translate3d(460px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			24.2605% {
+				-webkit-transform: translate3d(414px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			41.0368% {
+				-webkit-transform: translate3d(460px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			41.0452% {
+				-webkit-transform: translate3d(460px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			41.835% {
+				-webkit-transform: translate3d(460px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			41.8433% {
+				-webkit-transform: translate3d(456.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			58.6113% {
+				-webkit-transform: translate3d(414px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			74.949% {
+				-webkit-transform: translate3d(460px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			92.0543% {
+				-webkit-transform: translate3d(414px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(434.80780744287466px, 561.6870623021455px, 0) rotateX(0) rotateY(0) rotateZ(-416.38deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj10 {
+			0% {
+				transform: translate3d(440.9402429036348px, 585.799698549335px, 0) rotateX(0) rotateY(0) rotateZ(-432.1deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			7.8131% {
+				transform: translate3d(460px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			24.2605% {
+				transform: translate3d(414px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			41.0368% {
+				transform: translate3d(460px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			41.0452% {
+				transform: translate3d(460px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			41.835% {
+				transform: translate3d(460px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			41.8433% {
+				transform: translate3d(456.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			58.6113% {
+				transform: translate3d(414px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			74.949% {
+				transform: translate3d(460px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			92.0543% {
+				transform: translate3d(414px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(434.80780744287466px, 561.6870623021455px, 0) rotateX(0) rotateY(0) rotateZ(-416.38deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj11 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(836px, -89px, 0) scale3d(.4, .4, 1);
+			transform: translate3d(836px, -89px, 0) scale3d(.4, .4, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj11 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj11 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj11 {
+			0% {
+				-webkit-transform: translate3d(646.7797676962172px, 522.2569735175601px, 0) rotateX(0) rotateY(0) rotateZ(390.85deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			13.2624% {
+				-webkit-transform: translate3d(682px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			29.7098% {
+				-webkit-transform: translate3d(636px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			46.4861% {
+				-webkit-transform: translate3d(682px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			46.4945% {
+				-webkit-transform: translate3d(682px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			47.0675% {
+				-webkit-transform: translate3d(682px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			47.0759% {
+				-webkit-transform: translate3d(676.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			63.8438% {
+				-webkit-transform: translate3d(636px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			80.1816% {
+				-webkit-transform: translate3d(682px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			97.2868% {
+				-webkit-transform: translate3d(636px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(642.8536808757633px, 506.81966415128204px, 0) rotateX(0) rotateY(0) rotateZ(380.73deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj11 {
+			0% {
+				transform: translate3d(646.7797676962172px, 522.2569735175601px, 0) rotateX(0) rotateY(0) rotateZ(390.85deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			13.2624% {
+				transform: translate3d(682px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			29.7098% {
+				transform: translate3d(636px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			46.4861% {
+				transform: translate3d(682px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			46.4945% {
+				transform: translate3d(682px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			47.0675% {
+				transform: translate3d(682px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			47.0759% {
+				transform: translate3d(676.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			63.8438% {
+				transform: translate3d(636px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			80.1816% {
+				transform: translate3d(682px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			97.2868% {
+				transform: translate3d(636px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(642.8536808757633px, 506.81966415128204px, 0) rotateX(0) rotateY(0) rotateZ(380.73deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj12 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(432px, -89px, 0) scale3d(.6, .6, 1);
+			transform: translate3d(432px, -89px, 0) scale3d(.6, .6, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj12 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj12 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj12 {
+			0% {
+				-webkit-transform: translate3d(232px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			17.8907% {
+				-webkit-transform: translate3d(278px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			34.338% {
+				-webkit-transform: translate3d(232px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			51.1143% {
+				-webkit-transform: translate3d(278px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			51.1227% {
+				-webkit-transform: translate3d(278px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			51.7187% {
+				-webkit-transform: translate3d(278px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			51.727% {
+				-webkit-transform: translate3d(274.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			68.495% {
+				-webkit-transform: translate3d(232px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			84.8327% {
+				-webkit-transform: translate3d(278px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(237.98413204060608px, 455.17331133991627px, 0) rotateX(0) rotateY(0) rotateZ(-346.74deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj12 {
+			0% {
+				transform: translate3d(232px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			17.8907% {
+				transform: translate3d(278px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			34.338% {
+				transform: translate3d(232px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			51.1143% {
+				transform: translate3d(278px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			51.1227% {
+				transform: translate3d(278px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			51.7187% {
+				transform: translate3d(278px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			51.727% {
+				transform: translate3d(274.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			68.495% {
+				transform: translate3d(232px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			84.8327% {
+				transform: translate3d(278px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(237.98413204060608px, 455.17331133991627px, 0) rotateX(0) rotateY(0) rotateZ(-346.74deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj13 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(656px, -89px, 0) scale3d(.4, .4, 1);
+			transform: translate3d(656px, -89px, 0) scale3d(.4, .4, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj13 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj13 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj13 {
+			0% {
+				-webkit-transform: translate3d(469.29849090325075px, 424.9853897106151px, 0) rotateX(0) rotateY(0) rotateZ(327.04deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			5.814% {
+				-webkit-transform: translate3d(456px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			22.371% {
+				-webkit-transform: translate3d(502px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			38.8183% {
+				-webkit-transform: translate3d(456px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			55.5947% {
+				-webkit-transform: translate3d(502px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			55.603% {
+				-webkit-transform: translate3d(502px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			56.3698% {
+				-webkit-transform: translate3d(502px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			56.3782% {
+				-webkit-transform: translate3d(496.09910797385623px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			73.1462% {
+				-webkit-transform: translate3d(456px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			89.4839% {
+				-webkit-transform: translate3d(502px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(474.1282698556597px, 405.05186016412347px, 0) rotateX(0) rotateY(0) rotateZ(313.97deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj13 {
+			0% {
+				transform: translate3d(469.29849090325075px, 424.9853897106151px, 0) rotateX(0) rotateY(0) rotateZ(327.04deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			5.814% {
+				transform: translate3d(456px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			22.371% {
+				transform: translate3d(502px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			38.8183% {
+				transform: translate3d(456px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			55.5947% {
+				transform: translate3d(502px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			55.603% {
+				transform: translate3d(502px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			56.3698% {
+				transform: translate3d(502px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			56.3782% {
+				transform: translate3d(496.09910797385623px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			73.1462% {
+				transform: translate3d(456px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			89.4839% {
+				transform: translate3d(502px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(474.1282698556597px, 405.05186016412347px, 0) rotateX(0) rotateY(0) rotateZ(313.97deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj14 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(873px, -89px, 0) scale3d(.6, .6, 1);
+			transform: translate3d(873px, -89px, 0) scale3d(.6, .6, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj14 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj14 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj14 {
+			0% {
+				-webkit-transform: translate3d(700.6419922104412px, 365.7866955417204px, 0) rotateX(0) rotateY(0) rotateZ(-287.89deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			10.8298% {
+				-webkit-transform: translate3d(673px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			27.3868% {
+				-webkit-transform: translate3d(719px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			43.8341% {
+				-webkit-transform: translate3d(673px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			60.6105% {
+				-webkit-transform: translate3d(719px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			60.6188% {
+				-webkit-transform: translate3d(719px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			61.2148% {
+				-webkit-transform: translate3d(719px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			61.2231% {
+				-webkit-transform: translate3d(715.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			77.9911% {
+				-webkit-transform: translate3d(673px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			94.3288% {
+				-webkit-transform: translate3d(719px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(703.34897188465px, 354.6144121206171px, 0) rotateX(0) rotateY(0) rotateZ(-280.53deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj14 {
+			0% {
+				transform: translate3d(700.6419922104412px, 365.7866955417204px, 0) rotateX(0) rotateY(0) rotateZ(-287.89deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			10.8298% {
+				transform: translate3d(673px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			27.3868% {
+				transform: translate3d(719px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			43.8341% {
+				transform: translate3d(673px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			60.6105% {
+				transform: translate3d(719px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			60.6188% {
+				transform: translate3d(719px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			61.2148% {
+				transform: translate3d(719px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.6, .6, 1);
+				opacity: 0
+			}
+
+			61.2231% {
+				transform: translate3d(715.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			77.9911% {
+				transform: translate3d(673px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			94.3288% {
+				transform: translate3d(719px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(703.34897188465px, 354.6144121206171px, 0) rotateX(0) rotateY(0) rotateZ(-280.53deg) scale3d(.6, .6, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj15 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(304px, -89px, 0) scale3d(.5, .5, 1);
+			transform: translate3d(304px, -89px, 0) scale3d(.5, .5, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj15 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj15 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj15 {
+			0% {
+				-webkit-transform: translate3d(146.48572101368453px, 304.5234556305075px, 0) rotateX(0) rotateY(0) rotateZ(248.01deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			16.2791% {
+				-webkit-transform: translate3d(104px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			32.8361% {
+				-webkit-transform: translate3d(150px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			49.2835% {
+				-webkit-transform: translate3d(104px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			66.0598% {
+				-webkit-transform: translate3d(150px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			66.0681% {
+				-webkit-transform: translate3d(150px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			66.6412% {
+				-webkit-transform: translate3d(150px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			66.6495% {
+				-webkit-transform: translate3d(144.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			83.4175% {
+				-webkit-transform: translate3d(104px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			99.7552% {
+				-webkit-transform: translate3d(150px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(148.1771023782487px, 297.54276340066764px, 0) rotateX(0) rotateY(0) rotateZ(243.44deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj15 {
+			0% {
+				transform: translate3d(146.48572101368453px, 304.5234556305075px, 0) rotateX(0) rotateY(0) rotateZ(248.01deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			16.2791% {
+				transform: translate3d(104px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			32.8361% {
+				transform: translate3d(150px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			49.2835% {
+				transform: translate3d(104px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			66.0598% {
+				transform: translate3d(150px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			66.0681% {
+				transform: translate3d(150px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			66.6412% {
+				transform: translate3d(150px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			66.6495% {
+				transform: translate3d(144.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			83.4175% {
+				transform: translate3d(104px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			99.7552% {
+				transform: translate3d(150px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(148.1771023782487px, 297.54276340066764px, 0) rotateX(0) rotateY(0) rotateZ(243.44deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj16 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(681px, -89px, 0) scale3d(.4, .4, 1);
+			transform: translate3d(681px, -89px, 0) scale3d(.4, .4, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj16 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj16 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj16 {
+			0% {
+				-webkit-transform: translate3d(516.3918666242632px, 247.96420481464463px, 0) rotateX(0) rotateY(0) rotateZ(-210.33deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			3.9958% {
+				-webkit-transform: translate3d(527px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			21.1011% {
+				-webkit-transform: translate3d(481px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			37.6581% {
+				-webkit-transform: translate3d(527px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			54.1055% {
+				-webkit-transform: translate3d(481px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			70.8818% {
+				-webkit-transform: translate3d(527px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			70.8901% {
+				-webkit-transform: translate3d(527px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			71.6799% {
+				-webkit-transform: translate3d(527px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			71.6883% {
+				-webkit-transform: translate3d(523.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			88.4562% {
+				-webkit-transform: translate3d(481px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(512.6412569770227px, 233.09522191543317px, 0) rotateX(0) rotateY(0) rotateZ(-200.54deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj16 {
+			0% {
+				transform: translate3d(516.3918666242632px, 247.96420481464463px, 0) rotateX(0) rotateY(0) rotateZ(-210.33deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			3.9958% {
+				transform: translate3d(527px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			21.1011% {
+				transform: translate3d(481px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			37.6581% {
+				transform: translate3d(527px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			54.1055% {
+				transform: translate3d(481px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			70.8818% {
+				transform: translate3d(527px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			70.8901% {
+				transform: translate3d(527px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			71.6799% {
+				transform: translate3d(527px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			71.6883% {
+				transform: translate3d(523.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			88.4562% {
+				transform: translate3d(481px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(512.6412569770227px, 233.09522191543317px, 0) rotateX(0) rotateY(0) rotateZ(-200.54deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj17 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(503px, -89px, 0) scale3d(.4, .4, 1);
+			transform: translate3d(503px, -89px, 0) scale3d(.4, .4, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj17 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj17 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj17 {
+			0% {
+				-webkit-transform: translate3d(330.1014057018048px, 215.09735561499207px, 0) rotateX(0) rotateY(0) rotateZ(189.35deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			6.9257% {
+				-webkit-transform: translate3d(349px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			24.031% {
+				-webkit-transform: translate3d(303px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			40.588% {
+				-webkit-transform: translate3d(349px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			57.0354% {
+				-webkit-transform: translate3d(303px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			73.8117% {
+				-webkit-transform: translate3d(349px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			73.82% {
+				-webkit-transform: translate3d(349px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			74.5869% {
+				-webkit-transform: translate3d(349px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			74.5952% {
+				-webkit-transform: translate3d(343.09910797385623px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			91.3632% {
+				-webkit-transform: translate3d(303px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(326.8771642000997px, 202.31511585643597px, 0) rotateX(0) rotateY(0) rotateZ(180.97deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj17 {
+			0% {
+				transform: translate3d(330.1014057018048px, 215.09735561499207px, 0) rotateX(0) rotateY(0) rotateZ(189.35deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			6.9257% {
+				transform: translate3d(349px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			24.031% {
+				transform: translate3d(303px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			40.588% {
+				transform: translate3d(349px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			57.0354% {
+				transform: translate3d(303px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			73.8117% {
+				transform: translate3d(349px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			73.82% {
+				transform: translate3d(349px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			74.5869% {
+				transform: translate3d(349px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			74.5952% {
+				transform: translate3d(343.09910797385623px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			91.3632% {
+				transform: translate3d(303px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(326.8771642000997px, 202.31511585643597px, 0) rotateX(0) rotateY(0) rotateZ(180.97deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj18 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(931px, -89px, 0) scale3d(.5, .5, 1);
+			transform: translate3d(931px, -89px, 0) scale3d(.5, .5, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj18 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj18 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj18 {
+			0% {
+				-webkit-transform: translate3d(746.8814651442506px, 170.6168257888108px, 0) rotateX(0) rotateY(0) rotateZ(-159.43deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			10.9726% {
+				-webkit-transform: translate3d(777px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			28.0778% {
+				-webkit-transform: translate3d(731px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			44.6348% {
+				-webkit-transform: translate3d(777px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			61.0822% {
+				-webkit-transform: translate3d(731px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			77.8585% {
+				-webkit-transform: translate3d(777px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			77.8669% {
+				-webkit-transform: translate3d(777px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			78.4629% {
+				-webkit-transform: translate3d(777px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			78.4712% {
+				-webkit-transform: translate3d(773.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			95.2392% {
+				-webkit-transform: translate3d(731px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(743.8477575625077px, 158.58994205610054px, 0) rotateX(0) rotateY(0) rotateZ(-151.52deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj18 {
+			0% {
+				transform: translate3d(746.8814651442506px, 170.6168257888108px, 0) rotateX(0) rotateY(0) rotateZ(-159.43deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			10.9726% {
+				transform: translate3d(777px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			28.0778% {
+				transform: translate3d(731px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			44.6348% {
+				transform: translate3d(777px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			61.0822% {
+				transform: translate3d(731px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			77.8585% {
+				transform: translate3d(777px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			77.8669% {
+				transform: translate3d(777px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			78.4629% {
+				transform: translate3d(777px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			78.4712% {
+				transform: translate3d(773.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			95.2392% {
+				transform: translate3d(731px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(743.8477575625077px, 158.58994205610054px, 0) rotateX(0) rotateY(0) rotateZ(-151.52deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj19 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(435px, -89px, 0) scale3d(.4, .4, 1);
+			transform: translate3d(435px, -89px, 0) scale3d(.4, .4, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj19 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj19 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj19 {
+			0% {
+				-webkit-transform: translate3d(240.84428481592286px, 130.82525143288956px, 0) rotateX(0) rotateY(0) rotateZ(134.06deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			15.0653% {
+				-webkit-transform: translate3d(281px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			32.1705% {
+				-webkit-transform: translate3d(235px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			48.7276% {
+				-webkit-transform: translate3d(281px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			65.1749% {
+				-webkit-transform: translate3d(235px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			81.9512% {
+				-webkit-transform: translate3d(281px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			81.9596% {
+				-webkit-transform: translate3d(281px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			82.3388% {
+				-webkit-transform: translate3d(281px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			82.3472% {
+				-webkit-transform: translate3d(275.09910797385623px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			99.1152% {
+				-webkit-transform: translate3d(235px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(236.7055123616703px, 114.41742906958751px, 0) rotateX(0) rotateY(0) rotateZ(123.31deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj19 {
+			0% {
+				transform: translate3d(240.84428481592286px, 130.82525143288956px, 0) rotateX(0) rotateY(0) rotateZ(134.06deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			15.0653% {
+				transform: translate3d(281px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			32.1705% {
+				transform: translate3d(235px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			48.7276% {
+				transform: translate3d(281px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			65.1749% {
+				transform: translate3d(235px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			81.9512% {
+				transform: translate3d(281px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			81.9596% {
+				transform: translate3d(281px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			82.3388% {
+				transform: translate3d(281px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.4, .4, 1);
+				opacity: 0
+			}
+
+			82.3472% {
+				transform: translate3d(275.09910797385623px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			99.1152% {
+				transform: translate3d(235px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(236.7055123616703px, 114.41742906958751px, 0) rotateX(0) rotateY(0) rotateZ(123.31deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj20 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(793px, -89px, 0) scale3d(.5, .5, 1);
+			transform: translate3d(793px, -89px, 0) scale3d(.5, .5, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj20 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj20 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj20 {
+			0% {
+				-webkit-transform: translate3d(597.3995397242591px, 90.32538432695569px, 0) rotateX(0) rotateY(0) rotateZ(-106.72deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			2.193% {
+				-webkit-transform: translate3d(593px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			18.5307% {
+				-webkit-transform: translate3d(639px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			35.636% {
+				-webkit-transform: translate3d(593px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			52.193% {
+				-webkit-transform: translate3d(639px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			68.6404% {
+				-webkit-transform: translate3d(593px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			85.4167% {
+				-webkit-transform: translate3d(639px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			85.425% {
+				-webkit-transform: translate3d(639px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			85.9394% {
+				-webkit-transform: translate3d(639px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			85.9477% {
+				-webkit-transform: translate3d(635.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(600.6710871469313px, 77.4380938361735px, 0) rotateX(0) rotateY(0) rotateZ(-98.32deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj20 {
+			0% {
+				transform: translate3d(597.3995397242591px, 90.32538432695569px, 0) rotateX(0) rotateY(0) rotateZ(-106.72deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			2.193% {
+				transform: translate3d(593px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			18.5307% {
+				transform: translate3d(639px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			35.636% {
+				transform: translate3d(593px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			52.193% {
+				transform: translate3d(639px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			68.6404% {
+				transform: translate3d(593px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			85.4167% {
+				transform: translate3d(639px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			85.425% {
+				transform: translate3d(639px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			85.9394% {
+				transform: translate3d(639px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			85.9477% {
+				transform: translate3d(635.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(600.6710871469313px, 77.4380938361735px, 0) rotateX(0) rotateY(0) rotateZ(-98.32deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj21 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(341px, -89px, 0) scale3d(.5, .5, 1);
+			transform: translate3d(341px, -89px, 0) scale3d(.5, .5, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj21 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj21 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj21 {
+			0% {
+				-webkit-transform: translate3d(154.42946988187168px, 54.754653410399754px, 0) rotateX(0) rotateY(0) rotateZ(84.17deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			6.0192% {
+				-webkit-transform: translate3d(141px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			22.3569% {
+				-webkit-transform: translate3d(187px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			39.4622% {
+				-webkit-transform: translate3d(141px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			56.0192% {
+				-webkit-transform: translate3d(187px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			72.4666% {
+				-webkit-transform: translate3d(141px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			89.2429% {
+				-webkit-transform: translate3d(187px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			89.2512% {
+				-webkit-transform: translate3d(187px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			89.6305% {
+				-webkit-transform: translate3d(187px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			89.6388% {
+				-webkit-transform: translate3d(181.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(156.8749165621075px, 45.12154171239621px, 0) rotateX(0) rotateY(0) rotateZ(77.85deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj21 {
+			0% {
+				transform: translate3d(154.42946988187168px, 54.754653410399754px, 0) rotateX(0) rotateY(0) rotateZ(84.17deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			6.0192% {
+				transform: translate3d(141px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			22.3569% {
+				transform: translate3d(187px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			39.4622% {
+				transform: translate3d(141px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			56.0192% {
+				transform: translate3d(187px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			72.4666% {
+				transform: translate3d(141px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			89.2429% {
+				transform: translate3d(187px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			89.2512% {
+				transform: translate3d(187px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			89.6305% {
+				transform: translate3d(187px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			89.6388% {
+				transform: translate3d(181.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(156.8749165621075px, 45.12154171239621px, 0) rotateX(0) rotateY(0) rotateZ(77.85deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj22 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(617px, -89px, 0) scale3d(.5, .5, 1);
+			transform: translate3d(617px, -89px, 0) scale3d(.5, .5, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj22 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj22 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj22 {
+			0% {
+				-webkit-transform: translate3d(441.2940323139426px, 11.956932935063492px, 0) rotateX(0) rotateY(0) rotateZ(-55.68deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			9.8319% {
+				-webkit-transform: translate3d(417px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			26.1696% {
+				-webkit-transform: translate3d(463px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			43.2749% {
+				-webkit-transform: translate3d(417px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			59.8319% {
+				-webkit-transform: translate3d(463px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			76.2792% {
+				-webkit-transform: translate3d(417px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			93.0556% {
+				-webkit-transform: translate3d(463px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			93.0639% {
+				-webkit-transform: translate3d(463px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			93.5783% {
+				-webkit-transform: translate3d(463px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			93.5866% {
+				-webkit-transform: translate3d(459.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(444.5908302370269px, -1.0298244109421688px, 0) rotateX(0) rotateY(0) rotateZ(-47.22deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj22 {
+			0% {
+				transform: translate3d(441.2940323139426px, 11.956932935063492px, 0) rotateX(0) rotateY(0) rotateZ(-55.68deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			9.8319% {
+				transform: translate3d(417px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-118deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			26.1696% {
+				transform: translate3d(463px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-238deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			43.2749% {
+				transform: translate3d(417px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-363deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			59.8319% {
+				transform: translate3d(463px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-481deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			76.2792% {
+				transform: translate3d(417px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-599deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			93.0556% {
+				transform: translate3d(463px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			93.0639% {
+				transform: translate3d(463px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			93.5783% {
+				transform: translate3d(463px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			93.5866% {
+				transform: translate3d(459.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-8.28deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(444.5908302370269px, -1.0298244109421688px, 0) rotateX(0) rotateY(0) rotateZ(-47.22deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj23 {
+			width: 109px;
+			height: 95px;
+			opacity: 0;
+			-webkit-transform: translate3d(966px, -89px, 0) scale3d(.5, .5, 1);
+			transform: translate3d(966px, -89px, 0) scale3d(.5, .5, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj23 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj23 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj23 {
+			0% {
+				-webkit-transform: translate3d(801.7982134165645px, -33.36037553511403px, 0) rotateX(0) rotateY(0) rotateZ(26.36deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			13.6581% {
+				-webkit-transform: translate3d(766px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			29.9958% {
+				-webkit-transform: translate3d(812px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			47.1011% {
+				-webkit-transform: translate3d(766px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			63.6581% {
+				-webkit-transform: translate3d(812px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			80.1055% {
+				-webkit-transform: translate3d(766px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			96.8818% {
+				-webkit-transform: translate3d(812px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			96.8901% {
+				-webkit-transform: translate3d(812px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			97.2694% {
+				-webkit-transform: translate3d(812px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			97.2777% {
+				-webkit-transform: translate3d(806.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(800.4019871391786px, -27.86035633843717px, 0) rotateX(0) rotateY(0) rotateZ(29.97deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj23 {
+			0% {
+				transform: translate3d(801.7982134165645px, -33.36037553511403px, 0) rotateX(0) rotateY(0) rotateZ(26.36deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			13.6581% {
+				transform: translate3d(766px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(118.87deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			29.9958% {
+				transform: translate3d(812px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(238.5deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			47.1011% {
+				transform: translate3d(766px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(363.05deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			63.6581% {
+				transform: translate3d(812px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(481.7deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			80.1055% {
+				transform: translate3d(766px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(599.08deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			96.8818% {
+				transform: translate3d(812px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			96.8901% {
+				transform: translate3d(812px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(720deg) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			97.2694% {
+				transform: translate3d(812px, -73.54728718266254px, 0) rotateX(0) rotateY(0) rotateZ(0) scale3d(.5, .5, 1);
+				opacity: 0
+			}
+
+			97.2777% {
+				transform: translate3d(806.0991079738562px, -50.302473682897414px, 0) rotateX(0) rotateY(0) rotateZ(15.25deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(800.4019871391786px, -27.86035633843717px, 0) rotateX(0) rotateY(0) rotateZ(29.97deg) scale3d(.5, .5, 1);
+				opacity: 1
+			}
+		}
+
+		.falling-wrap .falling-sprites .sprite.obj24 {
+			width: 109px;
+			height: 95px;
+			opacity: 1;
+			-webkit-transform: translate3d(831px, -89px, 0) rotateX(0) rotateY(0) rotateZ(2deg) scale3d(.4, .4, 1);
+			transform: translate3d(831px, -89px, 0) rotateX(0) rotateY(0) rotateZ(2deg) scale3d(.4, .4, 1);
+			-webkit-animation: falling-wrap-falling-sprites-sprite-obj24 10.6517s 0s infinite linear;
+			animation: falling-wrap-falling-sprites-sprite-obj24 10.6517s 0s infinite linear
+		}
+
+		@-webkit-keyframes falling-wrap-falling-sprites-sprite-obj24 {
+			0% {
+				-webkit-transform: translate3d(673.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-6.279999999999999deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			16.5051% {
+				-webkit-transform: translate3d(631px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-116deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			32.8428% {
+				-webkit-transform: translate3d(677px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-236deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			49.948% {
+				-webkit-transform: translate3d(631px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-361deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			66.5051% {
+				-webkit-transform: translate3d(677px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-479deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			82.9524% {
+				-webkit-transform: translate3d(631px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-597deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				-webkit-transform: translate3d(677px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-718deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+
+		@keyframes falling-wrap-falling-sprites-sprite-obj24 {
+			0% {
+				transform: translate3d(673.771961124183px, -60.83138570439187px, 0) rotateX(0) rotateY(0) rotateZ(-6.279999999999999deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			16.5051% {
+				transform: translate3d(631px, 107.65606584461759px, 0) rotateX(0) rotateY(0) rotateZ(-116deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			32.8428% {
+				transform: translate3d(677px, 290.019275480939px, 0) rotateX(0) rotateY(0) rotateZ(-236deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			49.948% {
+				transform: translate3d(631px, 479.8711026916369px, 0) rotateX(0) rotateY(0) rotateZ(-361deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			66.5051% {
+				transform: translate3d(677px, 660.7423526979494px, 0) rotateX(0) rotateY(0) rotateZ(-479deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			82.9524% {
+				transform: translate3d(631px, 839.6740782330162px, 0) rotateX(0) rotateY(0) rotateZ(-597deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate3d(677px, 1024px, 0) rotateX(0) rotateY(0) rotateZ(-718deg) scale3d(.4, .4, 1);
+				opacity: 1
+			}
+		}
+	</style>
+	<style type="text/css">
+		br:not(.show) {
+			display: none;
+		}
+
+		.window {
+			z-index: 2;
+		}
+
+		.pagelink {
+			z-index: 3;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<!-- <div class="window text_wrap">
+			<div class="text">
+				<h1>立即交易</h1>
+				<div>
+					<p>You've got a chance to win 以 $0 的佣金獲取美國股票!</p>
+					<p>Press OK to continue.</p>
+				</div>
+			</div>
+			<div class="buttons">
+				<a class="button exitpoint">
+					<span>OK</span>
+				</a>
+			</div>
+		</div> -->
+		<div class="falling-wrap">
+			<div class="falling-sprites">
+				<div class="sprite obj2">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj4">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj6">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj8">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj10">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj12">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj14">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj16">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj18">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj20">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj22">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+				<div class="sprite obj24">
+					<img width="250"
+						src="https://interstitial-07.com/contents/s/b8/2d/f0/6224ab92e1f34b8e349a099adc/0474546550103.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
